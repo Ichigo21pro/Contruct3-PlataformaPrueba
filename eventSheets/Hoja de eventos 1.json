@@ -1,5 +1,76 @@
 {
 	"name": "Hoja de eventos 1",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 805391853113592
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "PlayerAnim",
+					"sid": 566737791734007,
+					"parameters": {
+						"object": "PlayerBox",
+						"image-point-optional": "0"
+					}
+				}
+			],
+			"sid": 131683245807150
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 230641067393683,
+					"parameters": {
+						"key": 37
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "PlayerAnim",
+					"sid": 824122433755270,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 307438516046603
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 967907908591105,
+					"parameters": {
+						"key": 39
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "PlayerAnim",
+					"sid": 925959369846235,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 967336617461012
+		}
+	],
 	"sid": 738229341026762
 }

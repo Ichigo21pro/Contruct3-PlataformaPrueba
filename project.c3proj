@@ -8,6 +8,13 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Teclado",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -26,6 +33,27 @@
 			"name": "Mapa de teselas",
 			"author": "Scirra",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Platform",
+			"name": "Plataforma",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Desplazar hasta",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Sólido",
+			"author": "Scirra",
+			"bundled": false
 		}
 	],
 	"uniqueId": "6oqc6thxc2q",
@@ -33,7 +61,9 @@
 		"items": [
 			"FondoEnMosaico",
 			"MapaDeTeselas",
-			"Player"
+			"PlayerAnim",
+			"PlayerBox",
+			"Teclado"
 		],
 		"subfolders": []
 	},
