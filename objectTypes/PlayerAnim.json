@@ -4,7 +4,13 @@
 	"sid": 224312430490322,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Flash",
+			"name": "Parpadeo",
+			"sid": 539987632819157
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [

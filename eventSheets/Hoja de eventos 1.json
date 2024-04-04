@@ -210,6 +210,220 @@
 					"sid": 660489221731805
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "PlayerBox",
+					"sid": 637090362581585,
+					"parameters": {
+						"object": "enemy"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 101683665440428,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-falling",
+							"objectClass": "PlayerBox",
+							"sid": 252076344073646,
+							"behaviorType": "Plataforma"
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "PlayerBox",
+							"sid": 272196599328074,
+							"parameters": {
+								"comparison": 2,
+								"y-co-ordinate": "enemy.Y"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "enemy",
+							"sid": 386772309207568
+						},
+						{
+							"id": "set-vector-y",
+							"objectClass": "PlayerBox",
+							"sid": 683845622228789,
+							"behaviorType": "Plataforma",
+							"parameters": {
+								"vector-y": "-550"
+							}
+						}
+					],
+					"sid": 804315090749508
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 361643307434875
+						}
+					],
+					"actions": [
+						{
+							"id": "flash",
+							"objectClass": "PlayerAnim",
+							"sid": 548570418571158,
+							"behaviorType": "Parpadeo",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "2"
+							}
+						}
+					],
+					"sid": 642042629443300
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "enemy",
+					"sid": 285894794477126,
+					"parameters": {
+						"instance-variable": "Moverse",
+						"comparison": 0,
+						"value": "\"left\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "enemy",
+					"sid": 909313405574827,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"control": "left"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "enemy",
+					"sid": 287027370806397,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 155906337950788
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "enemy",
+					"sid": 602046189286606,
+					"parameters": {
+						"instance-variable": "Moverse",
+						"comparison": 0,
+						"value": "\"right\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "enemy",
+					"sid": 383741358449191,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"control": "right"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "enemy",
+					"sid": 964615483451508,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 243600242102288
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "enemy",
+					"sid": 692406968632043,
+					"parameters": {
+						"object": "Limite"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 153327227128269,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "enemy",
+							"sid": 331013720547386,
+							"parameters": {
+								"instance-variable": "Moverse",
+								"comparison": 0,
+								"value": "\"left\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "enemy",
+							"sid": 982640644821020,
+							"parameters": {
+								"instance-variable": "Moverse",
+								"value": "\"right\""
+							}
+						}
+					],
+					"sid": 373265360676115
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 614658334809362
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "enemy",
+							"sid": 334574890998585,
+							"parameters": {
+								"instance-variable": "Moverse",
+								"value": "\"left\""
+							}
+						}
+					],
+					"sid": 500257756335019
+				}
+			]
 		}
 	],
 	"sid": 738229341026762
