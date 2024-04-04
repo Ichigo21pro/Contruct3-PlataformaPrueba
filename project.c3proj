@@ -50,6 +50,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Sin",
+			"name": "Seno",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "scrollto",
 			"name": "Desplazar hasta",
 			"author": "Scirra",
@@ -72,7 +79,8 @@
 			"PlayerBox",
 			"Teclado",
 			"enemy",
-			"Limite"
+			"Limite",
+			"GemaAmarilla"
 		],
 		"subfolders": []
 	},
