@@ -2,6 +2,16 @@
 	"name": "Hoja de eventos 1",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "score",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 432757932651763
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -18,6 +28,14 @@
 					"parameters": {
 						"object": "PlayerBox",
 						"image-point-optional": "0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "TxtScore",
+					"sid": 398057794076148,
+					"parameters": {
+						"text": "\"Score: \"& score"
 					}
 				}
 			],
@@ -424,6 +442,36 @@
 					"sid": 500257756335019
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "PlayerBox",
+					"sid": 881298559624261,
+					"parameters": {
+						"object": "GemaAmarilla"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "GemaAmarilla",
+					"sid": 547152810902644
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 844787582073426,
+					"parameters": {
+						"variable": "score",
+						"value": "10"
+					}
+				}
+			],
+			"sid": 977915685387933
 		}
 	],
 	"sid": 738229341026762
